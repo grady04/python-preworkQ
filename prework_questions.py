@@ -33,11 +33,12 @@ print(max_num_in_list([2, 3, 5, 1, 4]))
 #Write a function to return if the given year is a leap year. A leap year is divisible by 4, but not divisible by 100, unless it is also divisible by 400. The return should be boolean Type (true/false). def is_leap_year(a_year):
 
 def is_leap_year(a_year):
-    if a_year > 400:
-       if a_year % 4 == 0:
-           print(a_year, "true")
-    else:
-            print(a_year, "false")
+    if a_year % 4 == 0:
+        print(a_year, "true")
+    elif a_year % 100 == 0:
+        print(a_year, "false")
+        if a_year > 400:
+            print("true")
 is_leap_year(96)
 
 #Question 5
@@ -45,7 +46,6 @@ is_leap_year(96)
 
 def is_consecutive(a_list):
     sorted(a_list) == list(range(min(a_list),max(a_list)+ 1))
-    if True:
-        print(a_list, "true")
+    return(sorted(a_list))
     
-is_consecutive([1, 2, 3])
+print(is_consecutive([1, 4, 5, 2, 3, 7]))
